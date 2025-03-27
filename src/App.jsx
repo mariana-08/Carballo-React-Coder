@@ -8,7 +8,7 @@ function App() {
   return (
 <>
 <NavbarBootstrap/>
-<ItemListContainer greeting='Bienvenidos a mi  1er  App '/>
+<ItemListContainer greeting='Bienvenidos a Vinos Punilla '/>
 </>
   )
 }

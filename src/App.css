@@ -5,16 +5,52 @@
 }
 
 /* mi css */
-
-/* Navbar */
-.NavContainer {
-  background-color: rgb(131, 3, 78);
-  padding: 2rem; 
+body {
+  font-family: "lato", serif;
+  font-size: 1rem;
+  color: #353535;
 }
 
+h1 {text-align: center;
+  padding: 1rem;
+}
 /* logo */
 .logo {
-width: 50px;
+  width: 100px;
+  margin: 0.8rem;
 }
 
+/* Navbar */
+.Nav-vinos{
+  background-color: #33373b;
+  padding: 2rem; 
+  color:#fff;
+}
+.menu-vinos {
+  color: #fff!important;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+.menu-vinos a {
+  color: #f2f2f2 !important;
+  text-decoration: none;
+}
+.menu-vinos a:hover {
+  color: #f2f2f2 !important;
+  font-weight: bold;
+}
 
+.dropdown-menu  {
+  background-color: #701030 !important;
+}
+/* prueba */
+.custom-dropdown .dropdown-item:focus, 
+.custom-dropdown .dropdown-item:active {
+ outline: none !important;
+ background-color: #fff !important; 
+ color: #701030 !important; 
+}
+.custom-dropdown .dropdown-item:hover {
+  background-color: #fff !important; 
+  color: #701030 !important; 
+}

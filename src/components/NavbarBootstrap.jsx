@@ -7,19 +7,21 @@ import CartWidgetReactIcons from './CartWidgetReactIcons';
 
 function NavbarBootstrap() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="Nav-vinos">
       <Container>
         <Navbar.Brand href="#home">
             <img src='../logo1.png' alt='logo de Vinos Punilla' className='logo'/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                    <Nav.Link href="#home">Inicio</Nav.Link>
-                    <NavDropdown title="Productos" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Nuevos</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Ofertas</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Más vendidos</NavDropdown.Item>              
+                <Nav className="menu-vinos">
+                    <Nav.Link href="#">Inicio</Nav.Link>
+                    <Nav.Link href="#">Nosotros</Nav.Link>
+                    <NavDropdown className="custom-dropdown" title="Vinos" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="#action/3.1">La Caroyense</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2">Noble</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">Viarago</NavDropdown.Item>  
+                        <NavDropdown.Item href="#action/3.4">Terra Camiare</NavDropdown.Item>                                  
                     </NavDropdown>
                 </Nav>
             </Navbar.Collapse>
