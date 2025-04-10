@@ -86,3 +86,13 @@ const products = [
           },2500)
       })
   }
+  //promesa para llamar un solo producto
+  export const getOneProducts = (id) => {
+    return new Promise ((resolve) => {
+      let productFound = products.find((product) => product.id === id)
+      setTimeout(() => {
+        resolve(productFound)
+      }, 1500)
+    })
+  }
+
