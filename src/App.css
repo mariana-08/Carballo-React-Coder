@@ -1,7 +1,6 @@
 * {  
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 /* mi css */
@@ -54,3 +53,52 @@ h1 {text-align: center;
   background-color: #fff !important; 
   color: #701030 !important; 
 }
+/* tarjeta de detalle de producto */
+.imgDetail {
+  text-align: center;
+}
+.imgDetail img {
+  width: auto;
+  height: 50%;
+}
+.Tit-Detail{
+  Color:#701030;
+}
+.botones{
+  margin-bottom: 1rem;
+}
+button.btn-menos {
+  background-color:#33373b;
+  color:#fff;
+  border: #33373b;
+  font-weight: 600;
+}
+button.btn-mas{
+  background-color:#33373b;
+  color:#fff;
+  border: #33373b;
+  font-weight: 600;
+}
+button.btn-menos:focus{
+  background-color:#33373b;
+  color:#fff; 
+  border: #525353;
+}
+button.btn-mas:focus {
+  background-color:#33373b;
+  color:#fff;
+  border: #525353;
+}
+button.carrito{
+  background-color:#701030;
+  color:#fff;
+  border: none;  
+  padding: 10px 15px;  
+}
+button.carrito:focus {  
+  background-color: #33373b;
+  color:#fff;
+  border:1px solid #33373b;
+}
+
+

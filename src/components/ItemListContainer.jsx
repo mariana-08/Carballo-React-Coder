@@ -14,10 +14,10 @@ const ItemListContainer = ({greeting}) => {
     console.log(data)
 
     return(
-        <div>
+        <section>
           <h1>{greeting}</h1>
           <ItemList data={data}/>
-        </div>
+        </section>
     )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Item = ({producto}) => {
   return (
-    <div className='card' style={{width: '20rem',margin:15}}>
+    <div className='card' >
         <img className='card-img-top' src={producto.img} alt={producto.name} />
         <div className='card-body'>
             <h5 className='card-title'>{producto.name}</h5>

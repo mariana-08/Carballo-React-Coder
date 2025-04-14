@@ -1,18 +1,27 @@
 import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 import ItemCount from './ItemCount'
-
 
 const ItemDetail = ({productDetail}) => {
   return (
-    <div>
-        <h2>Vino:</h2>
-        <p>{productDetail.name}</p>
-        <img src={productDetail.img} alt={productDetail.name} />
-        <p>{productDetail.description}</p>
-        <p>Precio: ${productDetail.price}</p>
-        <p>Stock: {productDetail.stock}</p>
-        <ItemCount stock={productDetail.stock} />
-    </div>
+    <Container>
+      <Row>        
+          <div className='card'>
+            <Row>
+              <Col className='imgDetail' sm={12} md={5} >            
+                <img  src={productDetail.img} alt={productDetail.name} />
+              </Col>
+              <Col className='card-body' sm={12} md={7} >
+                <h2 className='Tit-Detail'>{productDetail.name}</h2>
+                <p>{productDetail.description}</p>
+                <p>Precio: ${productDetail.price}</p>
+                <p>Stock: {productDetail.stock}</p>
+                <ItemCount stock={productDetail.stock} />    
+              </Col>                           
+            </Row>           
+          </div>               
+      </Row>       
+    </Container>
   )
 }
 

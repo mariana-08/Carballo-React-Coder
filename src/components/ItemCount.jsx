@@ -24,12 +24,12 @@ const ItemCount = ({stock}) => {
 
   return (
     <div>
-         <div>
-           <button className='btn btn-danger' onClick= {substract}>-</button>
+         <div className='botones'>
+           <button className='btn btn-menos' onClick= {substract}>-</button>
               <span className='mx-2 btn'>{count}</span>
-              <button className='btn btn-success' onClick={add}>+</button>
+              <button className='btn btn-mas' onClick={add}>+</button>
         </div>
-        <button className='btn btn-primary' onClick={comprar}>Agregar al carrito</button>      
+        <button className='btn carrito' onClick={comprar}>Agregar al carrito</button>      
     </div>
   )
 }
