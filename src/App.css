@@ -54,19 +54,11 @@ h1 {text-align: center;
   color: #701030 !important; 
 }
 /* tarjeta de detalle de producto */
-.imgDetail {
-  text-align: center;
-}
-.imgDetail img {
-  width: auto;
-  height: 50%;
-}
+
 .Tit-Detail{
   Color:#701030;
 }
-.botones{
-  margin-bottom: 1rem;
-}
+
 button.btn-menos {
   background-color:#33373b;
   color:#fff;

@@ -4,23 +4,20 @@ import ItemCount from './ItemCount'
 
 const ItemDetail = ({productDetail}) => {
   return (
-    <Container>
-      <Row>        
-          <div className='card'>
+    <Container className='d-flex justify-content-center align-items-center vh-100'>             
+          <div className='card w-75 p-3 shadow-lg border-0 rounded-3'>
             <Row>
-              <Col className='imgDetail' sm={12} md={5} >            
-                <img  src={productDetail.img} alt={productDetail.name} />
+              <Col className='d-flex justify-content-center align-items-center' sm={12} md={5}  >            
+                <img className="w-100 h-auto" src={productDetail.img} alt={productDetail.name}/>
               </Col>
               <Col className='card-body' sm={12} md={7} >
                 <h2 className='Tit-Detail'>{productDetail.name}</h2>
                 <p>{productDetail.description}</p>
-                <p>Precio: ${productDetail.price}</p>
-                <p>Stock: {productDetail.stock}</p>
+                <h3>Precio: ${productDetail.price}</h3>                
                 <ItemCount stock={productDetail.stock} />    
               </Col>                           
             </Row>           
-          </div>               
-      </Row>       
+          </div>  
     </Container>
   )
 }
