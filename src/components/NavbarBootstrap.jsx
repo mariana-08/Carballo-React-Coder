@@ -3,25 +3,25 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidgetReactIcons from './CartWidgetReactIcons';
-
+import {NavLink} from 'react-router-dom';
 
 function NavbarBootstrap() {
   return (
     <Navbar expand="lg" className="Nav-vinos">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand as={NavLink} to="/">
             <img src='../logo1.png' alt='logo de Vinos Punilla' className='logo'/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="menu-vinos">
-                    <Nav.Link href="#">Inicio</Nav.Link>
-                    <Nav.Link href="#">Nosotros</Nav.Link>
+                    <Nav.Link as={NavLink} to='/'>Inicio</Nav.Link>
+                    {/* <Nav.Link as={NavLink} to='/'>Nosotros</Nav.Link> */}
                     <NavDropdown className="custom-dropdown" title="Vinos" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">La Caroyense</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Noble</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Viarago</NavDropdown.Item>  
-                        <NavDropdown.Item href="#action/3.4">Terra Camiare</NavDropdown.Item>                                  
+                        <NavDropdown.Item as={NavLink} to='/category/caroyense'>La Caroyense</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to='/category/noble'>Noble</NavDropdown.Item>
+                        <NavDropdown.Item as={NavLink} to='/category/viarago'>Viarago</NavDropdown.Item>  
+                        <NavDropdown.Item as={NavLink} to='/category/terra'>Terra Camiare</NavDropdown.Item>                                  
                     </NavDropdown>
                 </Nav>
             </Navbar.Collapse>

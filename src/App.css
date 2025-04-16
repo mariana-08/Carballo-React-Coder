@@ -54,11 +54,19 @@ h1 {text-align: center;
   color: #701030 !important; 
 }
 /* tarjeta de detalle de producto */
-
+a.btn.btn-ver-mas {
+  background-color: #701030;
+  color: #fff;
+  border: none;
+ }
+ a.btn.btn-ver-mas:focus {  
+  background-color: #33373b;
+  color:#fff;
+  border:1px solid #33373b;
+}
 .Tit-Detail{
   Color:#701030;
 }
-
 button.btn-menos {
   background-color:#33373b;
   color:#fff;
@@ -84,8 +92,7 @@ button.btn-mas:focus {
 button.carrito{
   background-color:#701030;
   color:#fff;
-  border: none;  
-  padding: 10px 15px;  
+  border: none;   
 }
 button.carrito:focus {  
   background-color: #33373b;

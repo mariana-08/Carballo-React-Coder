@@ -5,7 +5,7 @@ const products = [
       price: 750,
       description: 'Ofrece un atractivo color rojo rubí con tintes negros y un aroma intenso y frutado, destacando notas de frutos rojos como frambuesa y cereza.',
       stock: 15,
-      category: 'Caroyense',
+      category: 'caroyense',
       img: '../Caroya-Malbec.jpg',
     },
     {
@@ -14,7 +14,7 @@ const products = [
       price: 1000,
       description: 'De color rojo púrpura, con matices rubí y aromas reminiscentes a pequeños frutos rojos como frambuesas, grosellas y ciruelas',
       stock: 5,
-      category: 'Caroyense',
+      category: 'caroyense',
       img: '../PasoViejo-Cabernet.jpg',
     },
     {
@@ -23,7 +23,7 @@ const products = [
       price: 2300,
       description: 'En nariz fruta roja madura y hierbas como tomillo y orégano que hace prevalecer un perfil aromático muy fresco. En boca con mucho sabor, taninos muy redondos, fresco y con una persistencia media.',
       stock: 35,
-      category: 'Noble',
+      category: 'noble',
       img: '../Malbec.jpg',
     },
     {
@@ -32,7 +32,7 @@ const products = [
       price: 2675,
       description: 'Color rojo intenso con destellos violáceos. Sus aromas recuerdan a pimiento dulce, coco, tabaco y frutas rojas. En boca es suave, aterciopelado, de sabores especiados y taninos dulces.',
       stock: 10,
-      category: 'Noble',
+      category: 'noble',
       img: '../Merlot.jpg',
     },
     {
@@ -41,7 +41,7 @@ const products = [
         price: 850,
         description: 'Se destaca por ser un varietal 100% Malbec, que ha tenido una crianza en barricas de roble por 12 meses.',
         stock: 10,
-        category: 'Viarago',
+        category: 'viarago',
         img: '../Viarago-MalbecRoble.jpg',
       },
       {
@@ -50,7 +50,7 @@ const products = [
         price: 1150,
         description: 'Es un vino premium que se caracteriza por su mezcla exclusiva de variedades, ofreciendo un sabor profundo y sofisticado, ideal para ocasiones especiales.',
         stock: 10,
-        category: 'Viarago',
+        category: 'viarago',
         img: '../Viaragoblend.jpg',
       },
       {
@@ -59,7 +59,7 @@ const products = [
         price: 1150,
         description: 'Es un vino exótico y refrescante, elaborado con la variedad de uva americana Isabella.',
         stock: 10,
-        category: 'Terra',
+        category: 'terra',
         img: '../Isabella.jpg',
       },
       {
@@ -68,7 +68,7 @@ const products = [
         price: 1900,
         description:'De color rojo rubí profundo, en aroma se perciben notas de mermeladas de frutos rojos, especias y frutos silvestres. En boca es joven, vivaz y frutado, de persistencia media.',
         stock: 10,
-        category: 'Terra',
+        category: 'terra',
         img: '../Navira-Malbec.jpg',
       },
   ]

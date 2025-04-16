@@ -4,7 +4,7 @@ import ItemCount from './ItemCount'
 
 const ItemDetail = ({productDetail}) => {
   return (
-    <Container className='d-flex justify-content-center align-items-center vh-100'>             
+    <Container className='d-flex justify-content-center align-items-center w-75 mt-5'>             
           <div className='card w-75 p-3 shadow-lg border-0 rounded-3'>
             <Row>
               <Col className='d-flex justify-content-center align-items-center' sm={12} md={5}  >            
@@ -13,7 +13,7 @@ const ItemDetail = ({productDetail}) => {
               <Col className='card-body' sm={12} md={7} >
                 <h2 className='Tit-Detail'>{productDetail.name}</h2>
                 <p>{productDetail.description}</p>
-                <h3>Precio: ${productDetail.price}</h3>                
+                <h3>${productDetail.price}</h3>                
                 <ItemCount stock={productDetail.stock} />    
               </Col>                           
             </Row>           
