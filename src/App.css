@@ -58,6 +58,7 @@ a.btn.btn-ver-mas {
   background-color: #701030;
   color: #fff;
   border: none;
+  user-select: none;
  }
  a.btn.btn-ver-mas:focus {  
   background-color: #33373b;
@@ -67,24 +68,24 @@ a.btn.btn-ver-mas {
 .Tit-Detail{
   Color:#701030;
 }
-button.btn-menos {
+button.btn.btn-menos {
   background-color:#33373b;
   color:#fff;
   border: #33373b;
-  font-weight: 600;
+  font-weight: 600;  
 }
-button.btn-mas{
-  background-color:#33373b;
-  color:#fff;
-  border: #33373b;
-  font-weight: 600;
-}
-button.btn-menos:focus{
+button.btn.btn-menos:focus {
   background-color:#33373b;
   color:#fff; 
-  border: #525353;
+  border: #525353;  
 }
-button.btn-mas:focus {
+button.btn.btn-mas{
+  background-color:#33373b;
+  color:#fff;
+  border: #33373b;
+  font-weight: 600;
+}
+button.btn.btn-mas:focus {
   background-color:#33373b;
   color:#fff;
   border: #525353;
@@ -92,12 +93,16 @@ button.btn-mas:focus {
 button.carrito{
   background-color:#701030;
   color:#fff;
-  border: none;   
+  border: none;  
+  text-decoration: none;
+  border-bottom: #fff;
+  border-radius:0.375rem;    
+  user-select: none;    
 }
-button.carrito:focus {  
+button.carrito:active {  
   background-color: #33373b;
   color:#fff;
-  border:1px solid #33373b;
+  border:1px solid #33373b; 
 }
 
 

@@ -73,7 +73,7 @@ const products = [
       },
   ]
   
-  // promesa para simular una llamada a una API  
+  // promesa para simular una llamada a una API  al princio lo tenia con 2500ms pero lo baje a 10ms para no esperar tanto
   export const getProducts = () => {
       return new Promise((resolve, reject) => {
           let error = false
@@ -83,7 +83,7 @@ const products = [
               } else {
                   resolve(products)
               }
-          },2500)
+          },10)
       })
   }
   //promesa para llamar un solo producto
@@ -92,7 +92,7 @@ const products = [
       let productFound = products.find((product) => product.id === id)
       setTimeout(() => {
         resolve(productFound)
-      }, 1500)
+      }, 10)
     })
   }
 

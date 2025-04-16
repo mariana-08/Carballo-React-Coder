@@ -27,7 +27,7 @@ const comprar = () => {
             <span className='border px-3 py-2 rounded text-center '>{count}</span>
             <button className='btn btn-mas px-3 py-2' onClick={add}>+</button>
         </div>
-        <button className='btn carrito px-4 py-2 mt-3' onClick={comprar}>Agregar al carrito</button>      
+        <button className=' carrito px-4 py-2 mt-3' onClick={comprar}>Agregar al carrito</button>      
     </div>
   )
 }
