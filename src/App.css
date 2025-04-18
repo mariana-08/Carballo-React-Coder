@@ -1,7 +1,6 @@
 * {  
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 /* mi css */
@@ -54,3 +53,56 @@ h1 {text-align: center;
   background-color: #fff !important; 
   color: #701030 !important; 
 }
+/* tarjeta de detalle de producto */
+a.btn.btn-ver-mas {
+  background-color: #701030;
+  color: #fff;
+  border: none;
+  user-select: none;
+ }
+ a.btn.btn-ver-mas:focus {  
+  background-color: #33373b;
+  color:#fff;
+  border:1px solid #33373b;
+}
+.Tit-Detail{
+  Color:#701030;
+}
+button.btn.btn-menos {
+  background-color:#33373b;
+  color:#fff;
+  border: #33373b;
+  font-weight: 600;  
+}
+button.btn.btn-menos:focus {
+  background-color:#33373b;
+  color:#fff; 
+  border: #525353;  
+}
+button.btn.btn-mas{
+  background-color:#33373b;
+  color:#fff;
+  border: #33373b;
+  font-weight: 600;
+}
+button.btn.btn-mas:focus {
+  background-color:#33373b;
+  color:#fff;
+  border: #525353;
+}
+button.carrito{
+  background-color:#701030;
+  color:#fff;
+  border: none;  
+  text-decoration: none;
+  border-bottom: #fff;
+  border-radius:0.375rem;    
+  user-select: none;    
+}
+button.carrito:active {  
+  background-color: #33373b;
+  color:#fff;
+  border:1px solid #33373b; 
+}
+
+
