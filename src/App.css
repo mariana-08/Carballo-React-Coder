@@ -104,5 +104,11 @@ button.carrito:active {
   color:#fff;
   border:1px solid #33373b; 
 }
-
-
+/* error 404 */
+.text-error {
+  color: #701030; 
+}
+/* .fondo {
+  background-image: url(../error2.png);
+  background-repeat: no-repeat;
+} */
