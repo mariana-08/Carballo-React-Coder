@@ -92,7 +92,7 @@ const products = [
       let productFound = products.find((product) => product.id === id)
       setTimeout(() => {
         resolve(productFound)
-      }, 10)
+      }, 2000)
     })
   }
 
