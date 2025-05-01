@@ -2,6 +2,7 @@ import {getProducts} from '../mock/AsyncService'
 import { useState, useEffect } from 'react'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
+import LoaderComponent from './LoaderComponent'
 
 const ItemListContainer = ({greeting}) => {
     const [data, setData] = useState([])
@@ -27,7 +28,7 @@ const ItemListContainer = ({greeting}) => {
         <section className='mt-5'>
           <div className='d-flex justify-content-center'>
           {
-            loader ? <h2 className='text-center'>Cargando...</h2>
+            loader ? <LoaderComponent/>
             :<div>
                <h1>{greeting} {categoryId && <span style={{textTransform:'capitalize'}}>{categoryId}</span>}</h1>
             <ItemList data={data}/>

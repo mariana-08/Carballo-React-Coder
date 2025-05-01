@@ -83,7 +83,7 @@ const products = [
               } else {
                   resolve(products)
               }
-          },10)
+          }, 2000)
       })
   }
   //promesa para llamar un solo producto
