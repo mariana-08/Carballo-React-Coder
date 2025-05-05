@@ -12,9 +12,16 @@ export const CartProvider = ({ children }) => {
    
      //agregar un item al carrito
     const addToCart = (item, cantidad) => {
-        //sumar un nuevo item al carrito
-        setCart ([...cart, {...item, quantity:cantidad}]) 
+        //evaluar si el item esta en el carrito
+        if(isInCart(item.id)){
+                //sumar cantidades
+                       
+        }else{
+            //sumar un nuevo item al carrito
+            setCart ([...cart, {...item, quantity:cantidad}]) 
+        }        
     }
+    
       //funcion para vaciar el carrito
     const clear = () => {
         setCart([])
@@ -23,7 +30,7 @@ export const CartProvider = ({ children }) => {
     const removeItem = (id) => {
         setCart (cart.filter((prod) => prod.id !== id))
     }
-      //funcion para, si esta en el carrito
+      //funcion para, si ver esta en el carrito
     const isInCart =(id) =>{
         return cart.some((prod) => prod.id === id)
     }
