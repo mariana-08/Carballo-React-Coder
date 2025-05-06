@@ -7,6 +7,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Error404 from './components/Error404';
 import {CartProvider} from './context/CartContext';
 
+
+//esto es una prueba de commit
 function App() {
   
   return (
