@@ -4,56 +4,50 @@ import { Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 const CartView = () => {
-    const {cart, removeItem, clear} = useContext (CartContext) 
+    const {cart, removeItem, clear, cartTotal} = useContext (CartContext) 
   return (
-    <Container className='d-flex justify-content-center align-items-center   mt-5'>       
-        <div className= 'card w-75  p-1  border-1 rounded-3'>
-            {cart.map((compra) => (               
-                <Row key ={compra.id} className=" product-row  p-2">   
-                     <Col className='d-flex justify-content-center align-items-center' sm={12} md={4}  > 
-                        <img className='w-100 h-auto' src={compra.img} alt={compra.name} /> 
+<Container className="mt-5 mb-3">
+    <Row>   
+        <Col lg={8} sm={12}>
+            <div className="card p-1 border-1 rounded-3">
+                {cart.map((compra) => (
+                <Row key={compra.id} className="product-row p-2">
+                    <Col className="d-flex justify-content-center align-items-center" sm={12} md={4}>
+                        <img className="w-75 h-auto mb-2" src={compra.img} alt={compra.name} />
                     </Col>
-                    <Col className='card-body' sm={12}  md ={6} >
-                    <h2 className='Tit-Detail'>{compra.name}</h2>
-                    <p>Cantidad: {compra.quantity}</p>
-                    <p>Precio: ${compra.price}</p>                    
-                    <p>Precio final: ${compra.quantity * compra.price }</p>                   
-                    <p>Disponibles: </p>
+                    <Col className="card-body" sm={12} md={6}>
+                        <h2 className="Tit-Detail">{compra.name}</h2>
+                        <p>Cantidad: {compra.quantity}</p>
+                        <p>Precio: ${compra.price}</p>
+                        <p>Precio final: ${compra.quantity * compra.price}</p>
                     </Col>
-                    <Col className=' d-flex justify-content-center align-items-center ' sm={12} md={2}>
-                    <button className='btn btn-danger' onClick={() => removeItem(compra.id)}>Eliminar</button>                     
+                    <Col className="d-flex justify-content-center align-items-center mb-3" sm={12} md={2}>
+                    <button className="btn btn-danger" onClick={() => removeItem(compra.id)}>Eliminar</button>
                     </Col>
-                    <hr></hr>                                     
-                </Row>                
-            ))}
-            <Row>
-                <div className='w-50'>
-                    <button className='btn btn-danger' onClick={clear}>Vaciar carrito</button>
-                    </div>
-                    <div className='w-50'>
-                        <Link className='btn btn-primary py-2' to='/'>Seguir comprando</Link>
-                </div>
-            </Row>       
-               
-
-        </div>
-        <div className='card w-25 border-1 rounded-3 p-3 m-4 '>
-            <h4>Total a pagar : $</h4>
-            <div>
-            <Link className='btn btn-dark py-2' to='/checkout'>Finalizar compra</Link>
+                    <hr />
+                </Row>
+                ))}
             </div>
-        </div>
-        
-        
-    </Container>
+        </Col>
+        <Col lg={4} sm={12}>
+            <div className="sticky-summary card border-1 rounded-3 p-3 mt-4 mb-3 ">
+                <h4>Total a pagar: ${cartTotal()}</h4>
+                <div>
+                <Link className="btn btn-dark py-2 w-100 mb-2" to="/checkout">Finalizar compra</Link>
+                </div>
+                <Row>
+                    <Col xs={6}>
+                        <button className="btn btn-danger w-100" onClick={clear}>Vaciar carrito</button>
+                    </Col>
+                    <Col xs={6}>
+                        <Link className="btn btn-primary w-100" to="/">Seguir comprando</Link>
+                    </Col>
+                </Row>
+            </div>
+        </Col>
+    </Row>
+</Container>  
   )
 }
-
 export default CartView
 
-
-
-// <h3>Total a pagar : ${compra.price * compra.quantity}</h3>                      
-//                         <button className='btn btn-danger' onClick={clear}>Vaciar carrito</button>
-//                         <Link className='btn btn-primary' to='/checkout'>Finalizar compra</Link>
-//                         <Link className='btn btn-primary' to='/'>Seguir comprando</Link>
