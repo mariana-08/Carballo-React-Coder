@@ -2,11 +2,10 @@ import React, { useContext, useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import ItemCount from './ItemCount'
 import { CartContext } from '../context/CartContext'
+import { Link } from 'react-router-dom'
 
 const ItemDetail = ({productDetail}) => {
-
   const [compro, setCompro] = useState(false) 
-
   const {addToCart} = useContext(CartContext)
   const onAdd = (cantidad) => {
     addToCart (productDetail, cantidad)
@@ -23,10 +22,19 @@ const ItemDetail = ({productDetail}) => {
           <Col className='card-body' sm={12} md={7} >
             <h2 className='Tit-Detail'>{productDetail.name}</h2>
             <p>{productDetail.description}</p>
-            <h3>${productDetail.price}</h3>                
-            {compro ? <Link className='btn -btn-dark' to='/cart'>Ver carrito</Link> : <ItemCount stock={productDetail.stock} onAdd={onAdd} />  } 
-            <Link className='btn btn-primary' to='/'>Seguir comprando</Link> 
-          </Col>                           
+            <h3>${productDetail.price}</h3>
+            {
+              compro ? (
+                <div>                  
+                  <Link className='btn btn-dark py-2' to='/Cart'>Ir al carrito</Link>                  
+                  <Link className='btn btn-primary py-2 ' to='/'>Seguir comprando</Link>                                   
+                </div>
+              ) : (
+                <ItemCount stock={productDetail.stock} onAdd={onAdd} />
+              )
+            }
+            {/*  {compro ? <Link className='btn btn-dark' to='/cart'>Ver carrito</Link> : <ItemCount stock={productDetail.stock} onAdd={onAdd} /> } */}
+          </Col>               
         </Row>           
       </div>  
     </Container>

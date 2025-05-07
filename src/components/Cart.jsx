@@ -8,10 +8,9 @@ const Cart = () => {
   return (
     <div>{
         cart.length 
-        ? <CartView/>
-        : <EmptyCart/>
-        }
-    </div>
+        ?<CartView/>
+        :<EmptyCart/>
+    }</div>
   )
 }
 

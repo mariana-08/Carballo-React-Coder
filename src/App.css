@@ -90,6 +90,7 @@ button.btn.btn-mas:focus {
   color:#fff;
   border: #525353;
 }
+/* tarjeta pre-carrito */
 button.carrito{
   background-color:#701030;
   color:#fff;
@@ -104,11 +105,27 @@ button.carrito:active {
   color:#fff;
   border:1px solid #33373b; 
 }
+.bot-volver a {
+  color: #701030;
+  font-size: 14px;
+  font-weight:600;
+}
+a.btn.btn-dark {
+  background-color: #701030;
+  border: none;  
+  font-size: 1rem;
+  font-weight: 400;
+  width: 80%;
+  margin-bottom: 0.6rem;
+}
+a.btn.btn-primary {
+  background-color: #33373b;
+  border: none;  
+  width: 80%;
+  margin-bottom: 0.6rem;
+}
+
 /* error 404 */
 .text-error {
   color: #701030; 
 }
-/* .fondo {
-  background-image: url(../error2.png);
-  background-repeat: no-repeat;
-} */
