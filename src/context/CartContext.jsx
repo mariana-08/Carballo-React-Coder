@@ -1,6 +1,5 @@
 import { createContext, useState} from "react";
 
-//creamos un contexto para el carrito
 export const CartContext = createContext({})
 
 //creamos un provider para el carrito
@@ -44,18 +43,16 @@ export const CartProvider = ({ children }) => {
         return cart.some((prod) => prod.id === id)
     }    
         //funcion total de productos en el carrito (carWidget)
-    const cartQuantity = () => {
-            return cart.reduce((acc, prod) => acc += prod.quantity, 0)        
+    const totalProducts = () => {
+        return cart.reduce((acc, prod) => acc += prod.quantity, 0)        
     }
         //funcion total a pagar (cartview/ Checkout)
     const cartTotal = () => {
         return cart.reduce((acc, prod) => acc += prod.price * prod.quantity, 0)        
     }       
-    
         
-    
     return (
-        <CartContext.Provider value={{cart,addToCart,clear,removeItem,cartTotal,cartQuantity }}>
+        <CartContext.Provider value={{cart,addToCart,clear,removeItem,cartTotal, totalProducts }}>
             {children}
         </CartContext.Provider>
     )
