@@ -1,6 +1,6 @@
 const products = [
     {
-      id:'01',
+      // id:'01',
       name: 'Caroya',
       price: 750,
       description: 'Ofrece un atractivo color rojo rubí con tintes negros y un aroma intenso y frutado, destacando notas de frutos rojos como frambuesa y cereza.',

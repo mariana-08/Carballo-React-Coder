@@ -30,10 +30,10 @@ const CartView = () => {
             </div>
         </Col>
         <Col lg={4} sm={12}>
-            <div className="sticky-summary card border-1 rounded-3 p-3 mt-4 mb-3 ">
+            <div className="sticky-summary card border-1 rounded-3 p-3 mt-4 mb-3 gap-2 ">
                 <h4>Total a pagar: ${cartTotal()}</h4>
                 <div>
-                <Link className="btn btn-dark py-2 w-100 mb-2" to="/checkout">Finalizar compra</Link>
+                <Link to='/checkout' className="btn btn-dark py-2 w-100 mb-2" >Finalizar compra</Link>
                 </div>
                 <Row>
                     <Col xs={6}>

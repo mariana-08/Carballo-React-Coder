@@ -1,8 +1,10 @@
-import {getProducts} from '../mock/AsyncService'
-import { useState, useEffect } from 'react'
+// import {getProducts} from '../mock/AsyncService'
+import { useState, useEffect,  } from 'react'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
 import LoaderComponent from './LoaderComponent'
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../service/firebase'
 
 const ItemListContainer = ({greeting}) => {
     const [data, setData] = useState([])
@@ -10,19 +12,24 @@ const ItemListContainer = ({greeting}) => {
     const {categoryId} = useParams()
     console.log(categoryId)
 
+    //CONEXION A FIREBASE
     useEffect(() => {
       setLoader(true)
-      getProducts(categoryId)
-      .then((res) =>{
-        if(categoryId){
-          setData(res.filter((prod) => prod.category === categoryId))
-        }else{
-          setData(res)
-        }
-      })        
+      const productsCollection = collection(db, "productos")
+      getDocs (productsCollection)
+      .then((res) => {
+        const list = res.docs.map((doc) => {
+          return {
+            id: doc.id,
+            ...doc.data()                      
+          }
+        })
+        setData(list)
+      })
       .catch((error) => console.log(error))
       .finally(() => setLoader(false))
-    }, [categoryId])
+    },[])
+ 
     
     return(
         <section className='mt-5'>
