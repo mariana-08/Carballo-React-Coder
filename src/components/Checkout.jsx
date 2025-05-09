@@ -45,47 +45,51 @@ const Checkout = () => {
         }
     }
 
-  return (
-    <div>
-        {orderId
-        ? <div className='container'>
-            <h2>Gracias por tu compra!</h2>
-            <h3>Tu id de compra es: {orderId}</h3>
-            <Link className="btn btn-primary" to="/">Volver al inicio</Link>
-            {/* <p className='text-center'>Recibirás un email con la confirmación de tu compra</p> */}
+    return (
+        <div className='container mt-5'>
+            {orderId ? (
+                <div className='text-center'>
+                <h2>Gracias por tu compra!</h2>
+                <h3>Tu id de compra es: {orderId}</h3>
+                <Link className="btn btn-primary mt-3" to="/">Volver al inicio</Link>
+                {/* <p className='text-center'>Recibirás un email con la confirmación de tu compra</p> */}
+                </div>
+            ) : (
+            <div>
+                <h2 className='text-center mb-4'>Completa con tus datos</h2>
+                <div className='row justify-content-center'>
+                    <div className='col-md-6'>
+                        <form onSubmit={finalizarCompra}>
+                            <div className='mb-3'>
+                                <label htmlFor='name' className='form-label'>Nombre</label>
+                                <input type='text' className='form-control' name='name' onChange={buyerData} />
+                            </div>
+                            <div className='mb-3'>
+                                <label htmlFor='lastname' className='form-label'>Apellido</label>
+                                <input type='text' className='form-control' name='lastname' onChange={buyerData} />
+                            </div>
+                            <div className='mb-3'>
+                                <label htmlFor='address' className='form-label'>Dirección</label>
+                                <input type='text' className='form-control' name='address' onChange={buyerData} />
+                            </div>
+                            <div className='mb-3'>
+                                <label htmlFor='email' className='form-label'>Email</label>
+                                <input type='email' className='form-control' name='email' onChange={buyerData} />
+                            </div>
+                            <div className='mb-3'>
+                                <label htmlFor='second-email' className='form-label'>Repetir Email</label>
+                                <input type='email' className='form-control' name='second-email' onChange={(e) => setValidateEmail(e.target.value)} />
+                            </div>
+                            <div className='text-center'>
+                                <button type='submit' className='btn btn-dark py-2 px-5'>Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            )}
         </div>
-        :<div className='container mt-5 d-flex justify-content-center'>
-            <h2 className='text-center'>Completa con tus datos</h2>
-            <form className='w-100' onSubmit={finalizarCompra} >
-                <div >
-                    <label htmlFor='name' className='form-label'>Nombre</label>
-                    <input type='text' className='form-control' name='name' onChange={buyerData}/>
-                </div>
-                <div>
-                    <label htmlFor='lastname' className='form-label'>Apellido</label>
-                    <input type='text' className='form-control' name='lastname' onChange={buyerData} />
-                </div>
-                <div>
-                    <label htmlFor='address' className='form-label'>Dirección</label>
-                    <input type='text' className='form-control' name='address' onChange={buyerData} />
-                </div>
-                <div>
-                    <label htmlFor='email' className='form-label'>Email</label>
-                    <input type='email' className='form-control' name='email' onChange={buyerData} />
-                </div>
-                <div >
-                    <label htmlFor='second-email' className='form-label'>Repetir Email</label>
-                    <input type='email' className='form-control' name='second-email' onChange={(e)=>setValidateEmail(e.target.value)} />
-                </div>
-                <div >
-                    <button type='submit' className='btn btn-primary'>Enviar</button>
-                </div>
-            </form>
-        </div>
-
-        }
-    </div>
-  )
+    );
 }
 
 export default Checkout

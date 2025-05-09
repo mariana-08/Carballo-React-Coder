@@ -45,6 +45,9 @@ h1 {text-align: center;
 .dropdown-menu  {
   background-color: #701030 !important;
 }
+.dropdown-item.active {
+  background-color: #33373b !important;
+}
 /* prueba */
 .custom-dropdown .dropdown-item:focus, 
 .custom-dropdown .dropdown-item:active {
@@ -138,10 +141,8 @@ a.btn.btn-primary {
 }
 a.btn.btn-primary:hover {
   background-color: #38393a;
-  border: solid 1px #343638;
-  
+  border: solid 1px #343638;  
 }
-
 /* error 404 */
 .text-error {
   color: #701030; 
@@ -160,22 +161,25 @@ a.btn.btn-primary:hover {
   border: 1px solid #ddd; 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
 }
-
 .empty-cart-wrapper h1 {
   font-size: 2.5rem;
   font-weight: bold;
   color: #333;
 }
-
 .empty-cart-wrapper p {
   font-size: 1.2rem;
   color: #666;
 }
-
 .empty-cart-wrapper .btn {
   font-size: 1.1rem;
   padding: 0.75rem 1.5rem;
 }
-
-
+/* form */
+button.btn-dark {
+  background-color: #701030;
+  border: none;  
+  font-size: 1rem;
+  font-weight: 400; 
+  margin-bottom: 0.6rem;
+}
 
