@@ -3,13 +3,24 @@ import { Container, Row, Col } from 'react-bootstrap'
 import ItemCount from './ItemCount'
 import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 const ItemDetail = ({productDetail}) => {
   const [compro, setCompro] = useState(false) 
   const {addToCart} = useContext(CartContext)
+
   const onAdd = (cantidad) => {
     addToCart (productDetail, cantidad)
     setCompro(true)
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: `Agregaste ${cantidad} ${productDetail.name} <br/> al carrito`,
+      showCancelButton: false,
+      timer: 1500,
+      showConfirmButton: false,
+      width: '30rem'
+    })
   }
     
   return (

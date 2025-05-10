@@ -182,4 +182,7 @@ button.btn-dark {
   font-weight: 400; 
   margin-bottom: 0.6rem;
 }
-
+/*confirmar Swal  */
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
+   background-color: #701030; 
+}

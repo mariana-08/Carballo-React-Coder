@@ -1,12 +1,29 @@
-# React + Vite
+# Proyecto Coder Flex Carballo Mariana
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es la entrega Final y esta basado en lo aprendido en el curso de Coder Flex con la Profesora Laura. 
+![imge] (/public/app-coder.png)
 
-Currently, two official plugins are available:
+### Instalación ⚙️
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1.Clonar repositorio
+2. Haga el comando `cd Carballo-React-Coder` para moverse a la carpeta del proyecto
+3. Instale dependias con el comando `npm install`
+4. Para levantar la app en servidor local ejecute el comando `npm run dev`
 
-## Expanding the ESLint configuration
+### Versión Host 🖥️
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Si desea ver el proyecto Online, puede ingresar al siguiente link: [Carballo-React-Coder]()
+
+### Liberias utilizadas 📚
+
+- [React Bootstrapp](https://react-bootstrap.netlify.app/): utilizada para integrar los componentes y estilos de Bootstrap con aplicaciones React.
+- [Firesbase](https://firebase.google.com/?hl=es-419): utilizada como base de datos
+- [React RouterDom](https://reactrouter.com/start/declarative/installation): utilizada para gestionar la navegación y el enrutamiento en aplicaciones React en el navegador.
+- [React-Spinners](https://www.davidhu.io/react-spinners/): utilizada para indicar visualmente que una página o componente está cargando o procesando información.
+- [SweetAlert](https://sweetalert2.github.io/): utilizada para crear alertas visualmente más atractivas y personalizadas en este proyecto.
+- [ReactHookForm](https://react-hook-form.com/): utilizado para validar el formulario.
+
+
+
+
+###### Desarrollado por Mariana Carballo ❤️
