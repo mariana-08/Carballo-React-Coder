@@ -1,5 +1,4 @@
 import { createContext, useState} from "react";
-
 export const CartContext = createContext({})
 
 //creamos un provider para el carrito

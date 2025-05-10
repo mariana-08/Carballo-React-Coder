@@ -12,15 +12,14 @@ const ItemDetail = ({productDetail}) => {
   const onAdd = (cantidad) => {
     addToCart (productDetail, cantidad)
     setCompro(true)
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: `Agregaste ${cantidad} ${productDetail.name} <br/> al carrito`,
-      showCancelButton: false,
-      timer: 1500,
-      showConfirmButton: false,
-      width: '30rem'
-    })
+      Swal.fire({
+        position: 'center',
+        title: `Agregaste ${cantidad} ${productDetail.name} <br/> al carrito`,
+        showCancelButton: false,
+        timer: 1500,
+        showConfirmButton: false,
+        width: '30rem'
+      })
   }
     
   return (

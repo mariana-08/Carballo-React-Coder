@@ -31,37 +31,18 @@ const CartView = () => {
             })
         }
         // eliminar producto
-        const deleteConfirmar = (id) =>  {
+        const eliminarProd = (id, name) => {
+            removeItem(id)
             Swal.fire({
-                title: '¿Eliminar este producto?',
-                showCancelButton: true,
-                confirmButtonColor: '#d33',
-                cancelButtonColor: '#6c757d',
-                confirmButtonText: 'Sí, eliminar',
-                cancelButtonText: 'Cancelar'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    removeItem(id);
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Producto eliminado',
-                        showConfirmButton: false,
-                        timer: 1500,
-                        width: '20rem'
-                    })
-                } else {
-                    Swal.fire({
-                        title: 'Cancelado',
-                        text: 'El producto sigue en el carrito',
-                        showConfirmButton: false,
-                        timer: 1800,
-                        width: '20rem'
-                    })
-                }
+                position: 'center',                
+                title: `Eliminaste ${name} del carrito`,
+                showCancelButton: false,
+                timer: 1500,
+                showConfirmButton: false,
+                width: '30rem'
             })
-        }
-        
-        
+}
+       
   return (
     <Container className="mt-5 mb-3">
         <Row>   
@@ -79,7 +60,7 @@ const CartView = () => {
                             <p>Precio final: ${compra.quantity * compra.price}</p>
                         </Col>
                         <Col className="d-flex justify-content-center align-items-center mb-3" sm={12} md={2}>
-                        <button className="btn btn-danger" onClick={() => deleteConfirmar(compra.id)}>Eliminar</button>
+                        <button className="btn btn-danger" onClick={() => eliminarProd(compra.id, compra.name)}>Eliminar</button>
                         </Col>
                         <hr />
                     </Row>

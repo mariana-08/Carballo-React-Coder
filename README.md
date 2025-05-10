@@ -17,8 +17,9 @@ Si desea ver el proyecto Online, puede ingresar al siguiente link: [Carballo-Rea
 ### Liberias utilizadas 📚
 
 - [React Bootstrapp](https://react-bootstrap.netlify.app/): utilizada para integrar los componentes y estilos de Bootstrap con aplicaciones React.
-- [Firesbase](https://firebase.google.com/?hl=es-419): utilizada como base de datos
+- [Firesbase](https://firebase.google.com/?hl=es-419): utilizada como base de datos.
 - [React RouterDom](https://reactrouter.com/start/declarative/installation): utilizada para gestionar la navegación y el enrutamiento en aplicaciones React en el navegador.
+-[React Icons](https://react-icons.github.io/react-icons/): utilizado para iconos como el del carrito.
 - [React-Spinners](https://www.davidhu.io/react-spinners/): utilizada para indicar visualmente que una página o componente está cargando o procesando información.
 - [SweetAlert](https://sweetalert2.github.io/): utilizada para crear alertas visualmente más atractivas y personalizadas en este proyecto.
 - [ReactHookForm](https://react-hook-form.com/): utilizado para validar el formulario.
