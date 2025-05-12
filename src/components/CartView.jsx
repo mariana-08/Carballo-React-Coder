@@ -34,14 +34,14 @@ const CartView = () => {
         const eliminarProd = (id, name) => {
             removeItem(id)
             Swal.fire({
-                position: 'center',                
+                position: 'center',
+                icon: 'success',
                 title: `Eliminaste ${name} del carrito`,
-                showCancelButton: false,
-                timer: 1500,
                 showConfirmButton: false,
-                width: '30rem'
+                timer: 1500,
+                toast: true
             })
-}
+        }
        
   return (
     <Container className="mt-5 mb-3">
@@ -62,7 +62,7 @@ const CartView = () => {
                         <Col className="d-flex justify-content-center align-items-center mb-3" sm={12} md={2}>
                         <button className="btn btn-danger" onClick={() => eliminarProd(compra.id, compra.name)}>Eliminar</button>
                         </Col>
-                        <hr />
+                        <hr/>
                     </Row>
                     ))}
                 </div>

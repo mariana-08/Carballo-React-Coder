@@ -52,7 +52,6 @@ const Checkout = () => {
                 <h2>Gracias por tu compra!</h2>
                 <h3>Tu id de compra es: {orderId}</h3>
                 <Link className="btn btn-primary mt-3" to="/">Volver al inicio</Link>
-                {/* <p className='text-center'>Recibirás un email con la confirmación de tu compra</p> */}
                 </div>
             ) : (
             <div>
