@@ -4,13 +4,13 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const CartWidgetReactIcons = () => {
-    const {totalProducts} = useContext (CartContext)  
+    const {totalProducts, cart} = useContext (CartContext)  
     return(
         <div>
             <BsCart4 color='#fff' fontSize={'2rem'}  />
-            <Badge bg='' style={{backgroundColor:'#780A2F'}}>  
-            {totalProducts()} 
-            </Badge>           
+            {cart.length > 0 && <Badge bg='' style={{backgroundColor:'#780A2F'}}>  
+                {totalProducts()} 
+                </Badge>}           
         </div>
     )
 }

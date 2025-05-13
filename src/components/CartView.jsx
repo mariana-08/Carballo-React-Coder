@@ -35,11 +35,11 @@ const CartView = () => {
             removeItem(id)
             Swal.fire({
                 position: 'center',
-                icon: 'success',
-                title: `Eliminaste ${name} del carrito`,
+                title: `Eliminaste ${name} <br/>del carrito`,
+                showCancelButton: false,
+                timer: 1100,
                 showConfirmButton: false,
-                timer: 1500,
-                toast: true
+                width: '30rem',
             })
         }
        
@@ -56,7 +56,7 @@ const CartView = () => {
                         <Col className="card-body" sm={12} md={6}>
                             <h2 className="Tit-Detail">{compra.name}</h2>
                             <p>Cantidad: {compra.quantity}</p>
-                            <p>Precio: ${compra.price}</p>
+                            <p>Precio unidad: ${compra.price}</p>
                             <p>Precio final: ${compra.quantity * compra.price}</p>
                         </Col>
                         <Col className="d-flex justify-content-center align-items-center mb-3" sm={12} md={2}>

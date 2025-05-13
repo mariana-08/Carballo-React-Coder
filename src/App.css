@@ -183,6 +183,14 @@ button.btn-dark {
   margin-bottom: 0.6rem;
 }
 /*confirmar Swal  */
-div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
-   background-color: #701030; 
+button.swal2-confirm.swal2-styled {
+   background-color: #701030 !important; 
+}
+/* fin de comprar */
+h4.text-primary {
+  color:#701030 !important;
+}
+/* footer */
+footer.bg-dark {
+  background-color: #33373b !important;
 }

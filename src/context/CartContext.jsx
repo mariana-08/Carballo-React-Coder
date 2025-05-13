@@ -48,10 +48,19 @@ export const CartProvider = ({ children }) => {
         //funcion total a pagar (cartview/ Checkout)
     const cartTotal = () => {
         return cart.reduce((acc, prod) => acc += prod.price * prod.quantity, 0)        
-    }       
+    } 
+        //funcion para ver la cantidad de un item en el carrito, sino esta devuelve 0    
+    const itemQuantity =(id) => {
+        const itemInCart = cart.find((prod) => prod.id === id)
+        if(itemInCart){
+            return itemInCart.quantity
+        }else {
+            return 0
+        }
+    }  
         
     return (
-        <CartContext.Provider value={{cart,addToCart,clear,removeItem,cartTotal, totalProducts }}>
+        <CartContext.Provider value={{cart,addToCart,clear,removeItem,cartTotal, totalProducts, itemQuantity }}>
             {children}
         </CartContext.Provider>
     )

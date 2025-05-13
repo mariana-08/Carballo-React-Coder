@@ -15,14 +15,14 @@ function NavbarBootstrap() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="menu-vinos">
-                    <Nav.Link as={NavLink} to='/'>Inicio</Nav.Link>
-                    {/* <Nav.Link as={NavLink} to='/'>Nosotros</Nav.Link> */}
+                    <Nav.Link as={NavLink} to='/'>Inicio</Nav.Link>                    
                     <NavDropdown className="custom-dropdown" title="Vinos" id="basic-nav-dropdown">
                         <NavDropdown.Item as={NavLink} to='/category/caroyense'>La Caroyense</NavDropdown.Item>
                         <NavDropdown.Item as={NavLink} to='/category/noble'>Noble</NavDropdown.Item>
                         <NavDropdown.Item as={NavLink} to='/category/viarago'>Viarago</NavDropdown.Item>  
                         <NavDropdown.Item as={NavLink} to='/category/terra'>Terra Camiare</NavDropdown.Item>                                  
                     </NavDropdown>
+                    <Nav.Link as={NavLink} to='/nosotros'>Nosotros</Nav.Link> 
                 </Nav>
             </Navbar.Collapse>
             <NavLink to='/cart'>
