@@ -6,7 +6,7 @@ import Swal from 'sweetalert2'
 
 const CartView = () => {
     const {cart, removeItem, clear, cartTotal} = useContext (CartContext)
-        // vaciar carrito
+       
         const preConfirmar = () => {
             Swal.fire({
                 title: '¿Estás seguro de que quieres vaciar el carrito?',   
@@ -30,7 +30,7 @@ const CartView = () => {
                 }
             })
         }
-        // eliminar producto
+        
         const eliminarProd = (id, name) => {
             removeItem(id)
             Swal.fire({

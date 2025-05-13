@@ -1,4 +1,3 @@
-// import {getProducts, products } from '../mock/AsyncService'
 import { useState, useEffect,  } from 'react'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
@@ -12,7 +11,6 @@ const ItemListContainer = ({greeting}) => {
     const {categoryId} = useParams()
     console.log(categoryId)
 
-    //CONEXION A FIREBASE
     useEffect(() => {
       setLoader(true)
       const productsCollection = categoryId ? query(collection(db, "productos"), where("category", "==", categoryId)) : collection(db, "productos")

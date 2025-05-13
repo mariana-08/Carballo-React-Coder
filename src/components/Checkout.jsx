@@ -21,7 +21,7 @@ const Checkout = () => {
 
     const finalizarCompra = (e) => {
         e.preventDefault()
-        //valido
+        
         if(!buyer.name || !buyer.lastname || !buyer.email ){
             alert("Completa todos los campos")            
         }else if(buyer.email !== validateEmail){
@@ -35,7 +35,7 @@ const Checkout = () => {
             }
     
             const ventas = collection(db, "orders")
-            //agregar un doc
+            
             addDoc(ventas, order)
             .then ((res) =>{
                 setOrderId(res.id)

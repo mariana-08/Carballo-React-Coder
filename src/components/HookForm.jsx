@@ -29,7 +29,7 @@ const HookForm = () => {
         const ventas = collection(db, "orders")
         addDoc(ventas, order)   
         .then((res)=> {
-            // esto es para actualizar el stock en firebase
+            
             cart.forEach((item) => {
                 const docRef = doc(db, "productos", item.id)
                 getDoc(docRef)
@@ -38,7 +38,7 @@ const HookForm = () => {
                 })
                 .catch((error) => console.log(error))
             })
-            // hasta aca se actualiza el stock
+            
             setOrderId (res.id)
             clear()
         })

@@ -15,8 +15,7 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
       setLoading(true)
-      // const productCollection = collection(db, "productos")
-      // const docRef = doc(productCollection, itemId)
+     
 
       const docRef = doc(db, "productos", itemId)
 
@@ -32,7 +31,7 @@ const ItemDetailContainer = () => {
       .finally(() => setLoading(false))
     }, [ itemId ])   
 
-       // esto evalua si el producto no existe y lo redirige a la pagina de error
+       
       if(invalid) {
         return (
           <div className='d-flex flex-column align-items-center justify-content-center mt-5'>
