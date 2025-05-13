@@ -1,7 +1,10 @@
-import {getProducts} from '../mock/AsyncService'
-import { useState, useEffect } from 'react'
+// import {getProducts, products } from '../mock/AsyncService'
+import { useState, useEffect,  } from 'react'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
+import LoaderComponent from './LoaderComponent'
+import {  collection, getDocs, query, where } from 'firebase/firestore'
+import { db } from '../service/firebase'
 
 const ItemListContainer = ({greeting}) => {
     const [data, setData] = useState([])
@@ -9,25 +12,29 @@ const ItemListContainer = ({greeting}) => {
     const {categoryId} = useParams()
     console.log(categoryId)
 
+    //CONEXION A FIREBASE
     useEffect(() => {
       setLoader(true)
-      getProducts(categoryId)
-      .then((res) =>{
-        if(categoryId){
-          setData(res.filter((prod) => prod.category === categoryId))
-        }else{
-          setData(res)
-        }
-      })        
+      const productsCollection = categoryId ? query(collection(db, "productos"), where("category", "==", categoryId)) : collection(db, "productos")
+      getDocs (productsCollection)
+      .then((res) => {
+        const list = res.docs.map((doc) => {
+          return {
+            id: doc.id,
+            ...doc.data()                      
+          }
+        })
+        setData(list)
+      })
       .catch((error) => console.log(error))
       .finally(() => setLoader(false))
-    }, [categoryId])
+    },[categoryId])   
     
     return(
         <section className='mt-5'>
           <div className='d-flex justify-content-center'>
           {
-            loader ? <h2 className='text-center'>Cargando...</h2>
+            loader ? <LoaderComponent/>
             :<div>
                <h1>{greeting} {categoryId && <span style={{textTransform:'capitalize'}}>{categoryId}</span>}</h1>
             <ItemList data={data}/>
@@ -37,5 +44,4 @@ const ItemListContainer = ({greeting}) => {
         </section>
     )
 }
-
 export default ItemListContainer

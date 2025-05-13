@@ -1,3 +1,6 @@
+/* Animaciones suaves con Animate.css */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
 * {  
   margin: 0;
   padding: 0;
@@ -41,6 +44,9 @@ h1 {text-align: center;
 
 .dropdown-menu  {
   background-color: #701030 !important;
+}
+.dropdown-item.active {
+  background-color: #33373b !important;
 }
 /* prueba */
 .custom-dropdown .dropdown-item:focus, 
@@ -90,6 +96,7 @@ button.btn.btn-mas:focus {
   color:#fff;
   border: #525353;
 }
+/* tarjeta pre-carrito */
 button.carrito{
   background-color:#701030;
   color:#fff;
@@ -100,15 +107,90 @@ button.carrito{
   user-select: none;    
 }
 button.carrito:active {  
-  background-color: #33373b;
+  background-color: #BB0F4B;
   color:#fff;
-  border:1px solid #33373b; 
+  border: none;   
+}
+.bot-volver a {
+  color: #701030;
+  font-size: 14px;
+  font-weight:600;
+}
+a.btn.btn-dark {
+  background-color: #701030;
+  border: none;  
+  font-size: 1rem;
+  font-weight: 400; 
+  margin-bottom: 0.6rem;
+}
+a.btn.btn-dark:active {
+  background-color: #BB0F4B;
+  border: none;  
+}
+a.btn.btn-dark:hover {
+  background-color: #BB0F4B;
+  border: none;  
+  font-size: 1rem;
+  font-weight: 400; 
+  margin-bottom: 0.6rem;
+}
+a.btn.btn-primary {
+  background-color: #33373b;
+  border: solid 1px #33373b;
+  margin-bottom: 0.6rem;
+}
+a.btn.btn-primary:hover {
+  background-color: #38393a;
+  border: solid 1px #343638;  
 }
 /* error 404 */
 .text-error {
   color: #701030; 
 }
-/* .fondo {
-  background-image: url(../error2.png);
-  background-repeat: no-repeat;
-} */
+/* carrito */
+.sticky-summary {
+  position: sticky !important;
+  top: 10px; /* El espacio desde el tope de la pantalla */
+  z-index: 10;
+  background-color: white;
+}
+
+/* estilo para carrito vacio */
+.empty-cart-wrapper {
+  background-color: #fff; 
+  border: 1px solid #ddd; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+}
+.empty-cart-wrapper h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+.empty-cart-wrapper p {
+  font-size: 1.2rem;
+  color: #666;
+}
+.empty-cart-wrapper .btn {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+}
+/* form */
+button.btn-dark {
+  background-color: #701030;
+  border: none;  
+  font-size: 1rem;
+  font-weight: 400; 
+  margin-bottom: 0.6rem;
+}
+/*confirmar Swal  */
+button.swal2-confirm.swal2-styled {
+   background-color: #701030 !important; 
+}
+/* fin de comprar */
+h4.text-primary {
+  color:#701030 !important;
+}
+/* footer */
+footer.bg-dark {
+  background-color: #33373b !important;
+}
