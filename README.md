@@ -1,7 +1,7 @@
 # Proyecto Coder Flex Carballo Mariana
 
 Este proyecto es la entrega Final y esta basado en lo aprendido en el curso de Coder Flex con la Profesora Laura. 
-![imge] (/public/app-coder.png)
+![image] (/public/app-coder.png)
 
 ### Instalación ⚙️
 
